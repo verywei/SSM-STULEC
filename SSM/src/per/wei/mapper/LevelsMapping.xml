@@ -3,9 +3,15 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="per.wei.dao.LevelsDao">
 	<select id="getAllLevel" parameterType="String" resultType="levels">
-		select * from level
+		select * from level where id not in(select level from joinlevel where stu=#{id})
 	</select>
 	<select id="getJoinLevels" parameterType="String" resultType="selectJoinLevels">
-		select stu,name , date,payment from joinlevel,level where joinlevel.level=level.id and stu=#{id}
+		select id, stu,name , date,payment from joinlevel,level where joinlevel.level=level.id and stu=#{id}
 	</select>
+	<insert id="insertJoinLevel" parameterType="joinLevels">
+		insert into joinlevel values(#{stu},#{level},'未缴')
+	</insert>
+	<delete id="deleteJoinLevel" parameterType="joinLevels">
+		delete from joinlevel where stu=#{stu} and level=#{level}
+	</delete>
 </mapper>

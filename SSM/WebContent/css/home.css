@@ -9,7 +9,7 @@ body{margin:0px auto;width:1200px;}
 #customers th{font-size:1.1em; text-align:center;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#ffffff; }
 #customers tr.alt td {color:#000000;background-color:#EAF2D3;}
 .lectureinpute{}
-.table{back-ground:#8000ff}
+.table{back-ground:#80ffff}
 table th td a{text-decoration:none;}
 table th td a:link  {color:#0080ff;}
 table th td a:visited {color:#0080ff;}

@@ -12,4 +12,6 @@ import per.wei.entity.SelectJoinLevels;
 public interface LevelsDao {
 	public List<Levels> getAllLevel(String id);
 	public List<SelectJoinLevels> getJoinLevels(String id);
+	public void insertJoinLevel(JoinLevels joinLevels);
+	public void deleteJoinLevel(JoinLevels joinLevels);
 }

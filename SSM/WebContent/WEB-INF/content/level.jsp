@@ -48,12 +48,12 @@
 <%
 if(levels!=null){
 	for(Levels l:levels){
-		String href="#";
+		String href="/SSM/level/insert?level=";
 		out.append("<tr>");
 		out.append("<td>"+l.getName()+"</td>");
 		out.append("<td>"+l.getMoney()+"</td>");
 		out.append("<td>"+simpleDateFormat.format(l.getDate())+"</td>");
-		out.append("<td><a href="+href+">选择</a></td>");
+		out.append("<td><a href="+href+l.getId()+">选择</a></td>");
 		out.append("</tr>");
 	}
 }
@@ -75,12 +75,13 @@ List<SelectJoinLevels> joinLevels=(List<SelectJoinLevels>)request.getAttribute("
 
 if(joinLevels!=null){
 	for(SelectJoinLevels j:joinLevels){
+		String href="/SSM/level/delete?level=";
 		out.append("<tr>");
 		out.append("<td>"+j.getStu()+"</td>");
 		out.append("<td>"+j.getName()+"</td>");
 		out.append("<td>"+simpleDateFormat.format(j.getDate())+"</td>");
 		out.append("<td>"+j.getPayment()+"</td>");
-		out.append("<td><a href=#>退选</a></td>");
+		out.append("<td><a href="+href+j.getId()+">退选</a></td>");
 		out.append("</tr>");
 	}
 }

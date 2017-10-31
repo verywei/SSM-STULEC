@@ -6,10 +6,18 @@ package per.wei.entity;/**
 import java.sql.Timestamp;
 
 public class SelectJoinLevels {
+	String id;
 	String stu;
 	String name;
 	Timestamp date;
 	String payment;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getStu() {
 		return stu;
 	}

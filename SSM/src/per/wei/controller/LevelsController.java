@@ -7,7 +7,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import per.wei.entity.JoinLevels;
 import per.wei.entity.Levels;
@@ -32,6 +35,20 @@ public class LevelsController {
 		modelAndView.setViewName("/WEB-INF/content/level.jsp");
 		return modelAndView;
 	}
-	
-	
+	@RequestMapping("/insert")
+	public ModelAndView insertJoinLevel(@RequestParam("level") String level,JoinLevels joinLevels,ModelAndView modelAndView,HttpSession session){
+		joinLevels.setStu((String)session.getAttribute("user"));
+		joinLevels.setLevel(level);
+		levelsService.insertIntoLevel(joinLevels);
+		modelAndView.setViewName("redirect:/level/levelpage");
+		return modelAndView;
+	}
+	@RequestMapping("/delete")
+	public ModelAndView deleteJoinLevel(@RequestParam("level") String level,JoinLevels joinLevels,ModelAndView modelAndView,HttpSession session){
+		joinLevels.setStu((String)session.getAttribute("user"));
+		joinLevels.setLevel(level);
+		levelsService.deleteIntoLevel(joinLevels);
+		modelAndView.setViewName("redirect:/level/levelpage");
+		return modelAndView;
+	}
 }

@@ -61,8 +61,8 @@ if(lectures!=null){
 %>
 </table>
 </div>
-<div style="width:1090px;height:30px;background:#8000ff;">
-
+<div style="width:1090px;height:30px;background:#80ffff;text-align:center;">
+	已选课程
 </div>
 <div style="width:1090px;height:145px; overflow-y:scroll;overflow-x:hidden; border:1px solid;">
 <table id="customers">

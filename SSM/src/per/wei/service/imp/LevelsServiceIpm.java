@@ -33,4 +33,16 @@ public class LevelsServiceIpm implements LevelsService {
 		return levelsDao.getJoinLevels(id);
 	}
 
+	@Override
+	public void insertIntoLevel(JoinLevels joinLevels) {
+		levelsDao.insertJoinLevel(joinLevels);
+		
+	}
+
+	@Override
+	public void deleteIntoLevel(JoinLevels joinLevels) {
+		// TODO Auto-generated method stub
+		levelsDao.deleteJoinLevel(joinLevels);
+	}
+
 }
