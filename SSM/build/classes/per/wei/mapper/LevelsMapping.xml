@@ -5,4 +5,7 @@
 	<select id="getAllLevel" parameterType="String" resultType="levels">
 		select * from level
 	</select>
+	<select id="getJoinLevels" parameterType="String" resultType="selectJoinLevels">
+		select stu,name , date,payment from joinlevel,level where joinlevel.level=level.id and stu=#{id}
+	</select>
 </mapper>

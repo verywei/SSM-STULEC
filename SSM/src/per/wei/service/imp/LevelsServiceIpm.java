@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import per.wei.dao.LectureDao;
 import per.wei.dao.LevelsDao;
+import per.wei.entity.JoinLevels;
 import per.wei.entity.Levels;
+import per.wei.entity.SelectJoinLevels;
 import per.wei.service.LevelsService;
 
 /** 
@@ -24,6 +26,11 @@ public class LevelsServiceIpm implements LevelsService {
 	@Override
 	public List<Levels> getAllLevels(String id) {
 		return levelsDao.getAllLevel(id);
+	}
+
+	@Override
+	public List<SelectJoinLevels> getJoinLevels(String id) {
+		return levelsDao.getJoinLevels(id);
 	}
 
 }

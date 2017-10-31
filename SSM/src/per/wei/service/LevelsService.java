@@ -5,8 +5,11 @@ package per.wei.service;/**
 
 import java.util.List;
 
+import per.wei.entity.JoinLevels;
 import per.wei.entity.Levels;
+import per.wei.entity.SelectJoinLevels;
 
 public interface LevelsService {
 	public List<Levels> getAllLevels(String id);
+	public List<SelectJoinLevels> getJoinLevels(String id);
 }
