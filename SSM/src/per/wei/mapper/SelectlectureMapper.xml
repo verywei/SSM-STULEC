@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.wei.dao.SelectlectureDao">
+	<select id="selectByUser" parameterType="String" resultType="lectureToUser">
+		select lec,stu,score,name, credit from selectlecture,lecture where selectlecture.lec=lecture.id and stu=#{id} and score>0
+	</select>
+	<insert id="insert" parameterType="insertSelectlecture">
+		insert into selectlecture values(#{lecture},#{student},#{score})
+	</insert>
+	<delete id="delete" parameterType="insertSelectlecture">
+		delete from selectlecture where lec=#{lecture} and stu=#{student};
+	</delete>
+</mapper>
