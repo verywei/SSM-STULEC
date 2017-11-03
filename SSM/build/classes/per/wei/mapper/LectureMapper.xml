@@ -9,6 +9,6 @@
 		select * from lecture where id in (select lec from selectlecture where stu=#{id} and score=-1) ;
 	</select>
 	<insert id="insert" parameterType="lecture">
-		insert into lecture values(#{id},#{name},#{credit})
+		insert into lecture values(#{id},#{name},#{credit});
 	</insert>
 </mapper>

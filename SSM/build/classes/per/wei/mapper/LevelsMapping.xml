@@ -14,4 +14,7 @@
 	<delete id="deleteJoinLevel" parameterType="joinLevels">
 		delete from joinlevel where stu=#{stu} and level=#{level}
 	</delete>
+	<insert id="insertLevels" parameterType="levels">
+		insert into level(id,name,money,date) values(#{id},#{name},#{money},now())
+	</insert>
 </mapper>

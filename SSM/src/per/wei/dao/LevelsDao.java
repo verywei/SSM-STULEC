@@ -14,4 +14,5 @@ public interface LevelsDao {
 	public List<SelectJoinLevels> getJoinLevels(String id);
 	public void insertJoinLevel(JoinLevels joinLevels);
 	public void deleteJoinLevel(JoinLevels joinLevels);
+	public void insertLevels(Levels levels);
 }
