@@ -19,8 +19,8 @@ public class LogAspect {
 //		Logger logger=Logger.getLogger(rxt.getClass());
 //		logger.error("LogAspect¥Ú”°»’÷æ");;
 //	}
-	@Before("execution(* per.wei.service.imp.*.*(..))")
-	public void check(JoinPoint jop){
-		System.out.println("LogAspect.check***"+jop.getTarget());
-	}
+//	@Before("execution(* per.wei.service.imp.*.*(..))")
+//	public void check(JoinPoint jop){
+//		System.out.println("LogAspect.check***"+jop.getTarget());
+//	}
 }
