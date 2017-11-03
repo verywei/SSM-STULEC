@@ -12,8 +12,9 @@
     <!-- 自动扫描 -->
     <context:component-scan base-package="per.wei.dao"/>
     <context:component-scan base-package="per.wei.service"/>
+    
+    
     <!-- 配置数据源 -->
-
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"  destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/stutolec?useSSL=true" />  
@@ -32,16 +33,19 @@
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
     </bean>
 
+
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="per.wei.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 
+
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+	
 	
     <!-- 配置事务通知属性 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
@@ -68,11 +72,14 @@
         </tx:attributes>
     </tx:advice>
     
+    
     <!-- 配置事务切面 -->
      <aop:config>
         <aop:pointcut id="serviceOperation" expression="(execution(* per.wei.service.imp.*.*(..)))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
     </aop:config>
+    
+    
     <!-- 扫描组件，切面类 -->
     <context:component-scan base-package="per.wei.aspect,per.wei.test">
     	<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect"/>
