@@ -7,7 +7,6 @@ import java.util.List;
 
 import per.wei.entity.InsertSelectlecture;
 import per.wei.entity.LectureToUser;
-import per.wei.entity.Selectlecture;
 
 public interface SelectlectureService {
 	public List<LectureToUser> selectByUser(String id);

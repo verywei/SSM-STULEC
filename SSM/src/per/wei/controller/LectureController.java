@@ -6,19 +6,15 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.omg.CORBA.INTERNAL;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import per.wei.dao.LectureDao;
 import per.wei.entity.InsertSelectlecture;
 import per.wei.entity.Lecture;
 import per.wei.entity.LectureToUser;
-import per.wei.entity.Selectlecture;
 import per.wei.service.LectureService;
 import per.wei.service.SelectlectureService;
 import per.wei.service.UserService;
@@ -83,7 +79,9 @@ public class LectureController {
 		modelAndView.addObject("lectures", lectures);
 		return modelAndView;
 	}
-	
+	/*
+	 * Ñ¡¿Î
+	 */
 	@RequestMapping("/select")
 	public ModelAndView select(@RequestParam("lecture") String lecture,InsertSelectlecture insertSelectlecture,HttpServletRequest request,HttpSession session){
 		insertSelectlecture.setStudent((String)session.getAttribute("user"));
@@ -94,6 +92,9 @@ public class LectureController {
 		modelAndView.setViewName("redirect:/lecture/selectpage");
 		return modelAndView;
 	}
+	/*
+	 * ÍËÑ¡
+	 */
 	@RequestMapping("/delete")
 	public ModelAndView delete(@RequestParam("lecture") String lecture,InsertSelectlecture insertSelectlecture,ModelAndView modelAndView,HttpServletRequest request,HttpSession session){
 		insertSelectlecture.setLecture(lecture);

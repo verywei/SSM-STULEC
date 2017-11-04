@@ -2,12 +2,9 @@ package per.wei.service.imp;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import per.wei.dao.LectureDao;
 import per.wei.dao.LevelsDao;
 import per.wei.entity.JoinLevels;
 import per.wei.entity.Levels;

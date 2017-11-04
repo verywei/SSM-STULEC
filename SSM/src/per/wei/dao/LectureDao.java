@@ -3,7 +3,6 @@ package per.wei.dao;
 import java.util.List;
 
 import per.wei.entity.Lecture;
-import per.wei.entity.LectureToUser;
 
 /** 
 * @author  зїеп : wangwev

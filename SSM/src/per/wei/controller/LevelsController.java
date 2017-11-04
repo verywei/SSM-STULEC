@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 import per.wei.entity.JoinLevels;
 import per.wei.entity.Levels;
 import per.wei.entity.SelectJoinLevels;
@@ -26,6 +24,11 @@ import per.wei.service.LevelsService;
 public class LevelsController {
 	@Autowired
 	private LevelsService levelsService;
+	
+	
+	/*
+	 * 考级
+	 */
 	@RequestMapping("/levelpage")
 	public ModelAndView getalllevel(HttpSession session,ModelAndView modelAndView){
 		List<Levels> levels=levelsService.getAllLevels((String)session.getAttribute("user"));
@@ -35,6 +38,9 @@ public class LevelsController {
 		modelAndView.setViewName("/WEB-INF/content/level.jsp");
 		return modelAndView;
 	}
+	/*
+	 * 选择考级
+	 */
 	@RequestMapping("/insert")
 	public ModelAndView insertJoinLevel(@RequestParam("level") String level,JoinLevels joinLevels,ModelAndView modelAndView,HttpSession session){
 		joinLevels.setStu((String)session.getAttribute("user"));
@@ -43,6 +49,9 @@ public class LevelsController {
 		modelAndView.setViewName("redirect:/level/levelpage");
 		return modelAndView;
 	}
+	/*
+	 * 退选
+	 */
 	@RequestMapping("/delete")
 	public ModelAndView deleteJoinLevel(@RequestParam("level") String level,JoinLevels joinLevels,ModelAndView modelAndView,HttpSession session){
 		joinLevels.setStu((String)session.getAttribute("user"));

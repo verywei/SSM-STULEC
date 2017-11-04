@@ -8,10 +8,7 @@ import org.springframework.stereotype.Service;
 
 import per.wei.dao.SelectlectureDao;
 import per.wei.entity.InsertSelectlecture;
-import per.wei.entity.Lecture;
 import per.wei.entity.LectureToUser;
-import per.wei.entity.Selectlecture;
-import per.wei.service.LectureService;
 import per.wei.service.SelectlectureService;
 
 /** 

@@ -1,19 +1,10 @@
 package per.wei.service.imp;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.SessionAttributes;
-
-import per.wei.dao.LectureDao;
 import per.wei.dao.StudentDao;
-import per.wei.entity.Lecture;
 import per.wei.entity.Student;
 import per.wei.service.UserService;
-import per.wei.test.Test;
-import sun.print.resources.serviceui;
 
 /** 
 * @author  зїеп : wangwev

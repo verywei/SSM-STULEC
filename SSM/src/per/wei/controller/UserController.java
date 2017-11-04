@@ -1,19 +1,12 @@
 package per.wei.controller;
 
-import java.util.List;
-
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import per.wei.entity.Lecture;
-import per.wei.entity.LectureToUser;
-import per.wei.entity.Selectlecture;
 import per.wei.entity.Student;
 import per.wei.service.LectureService;
 import per.wei.service.SelectlectureService;
