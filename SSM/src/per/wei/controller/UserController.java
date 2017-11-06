@@ -1,11 +1,18 @@
 package per.wei.controller;
 
+import java.io.File;
+
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.sun.org.apache.regexp.internal.recompile;
 
 import per.wei.entity.Student;
 import per.wei.service.LectureService;
@@ -57,6 +64,24 @@ public class UserController {
 		request.getSession().removeAttribute("error");
 		ModelAndView modelAndView=new ModelAndView();
 		modelAndView.setViewName("redirect:/");
+		return modelAndView;
+	}
+	@RequestMapping("/upload")
+	public ModelAndView upload(@RequestParam("file") MultipartFile file,ModelAndView modelAndView,HttpServletRequest request) throws Exception{
+		String path=request.getServletContext().getRealPath("/files/");
+		String filename=file.getOriginalFilename();
+		File filepath=new File(path, filename);
+		if (!filepath.getParentFile().exists()) {
+			filepath.getParentFile().mkdirs();
+		}
+		modelAndView.setViewName("/WEB-INF/content/upload.jsp");
+		file.transferTo(new File(path+File.separator+filename));
+		return modelAndView;
+	}
+	@RequestMapping("/uploadpage")
+	public ModelAndView uploadpage(ModelAndView modelAndView){
+		modelAndView.setViewName("/WEB-INF/content/upload.jsp");
+		
 		return modelAndView;
 	}
 }

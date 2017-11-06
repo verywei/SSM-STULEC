@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -59,11 +60,11 @@ left:40%;
 <form action="/SSM/login" method="post">
 <table style="width:240px;height:100px;">
 <tr>
-<td>用户名:</td>
+<td><spring:message code="loginname"/></td>
 <td><input type="text" id="username" name="username"/></td>
 </tr>
 <tr>
-<td>密码:</td>
+<td><spring:message code="password"/></td>
 <td><input type="text" id="password" name="password"/><span><% %></span></td>
 </tr>
 <tr>

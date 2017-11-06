@@ -3,6 +3,7 @@ package per.wei.aspect;
 
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -14,13 +15,21 @@ import org.aspectj.lang.annotation.Before;
 */
 @Aspect
 public class LogAspect {
-//	@AfterReturning(returning="rxt" ,pointcut="execution(* per.wei.service.imp.*.*(..))")
-//	public void log(Object rxt){
-//		Logger logger=Logger.getLogger(rxt.getClass());
-//		logger.error("LogAspect打印日志");;
-//	}
-//	@Before("execution(* per.wei.service.imp.*.*(..))")
-//	public void check(JoinPoint jop){
-//		System.out.println("LogAspect.check***"+jop.getTarget());
-//	}
+	@AfterReturning(returning="rxt" ,pointcut="execution(* per.wei.service.imp.*.*(..))")
+	public void log(Object rxt){
+		if (rxt!=null) {
+			Logger logger=Logger.getLogger(rxt.getClass());
+			logger.error("LogAspect打印日志");
+		}
+		
+	}
+	@Before("execution(* per.wei.service.imp.*.*(..))")
+	public void check(JoinPoint jop){
+		System.out.println("LogAspect.check***"+jop.getTarget());
+	}
+	@After("execution(* per.wei.service.imp.*.*(..))")
+	public void finallys(){
+		System.out.println("after aspect");
+	}
+	
 }
