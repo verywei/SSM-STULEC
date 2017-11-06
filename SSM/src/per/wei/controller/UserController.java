@@ -38,6 +38,8 @@ public class UserController {
 	public ModelAndView login(String username,String password ,HttpServletRequest request){
 		Student user=userService.login(username);
 		ModelAndView mView=new ModelAndView();
+		String path=request.getServletContext().getRealPath("/files/");
+		System.out.println(path);
 		if (user==null) {
 			request.setAttribute("error", "ÔÝÎ´×¢²á");
 		}else {
@@ -69,6 +71,7 @@ public class UserController {
 	@RequestMapping("/upload")
 	public ModelAndView upload(@RequestParam("file") MultipartFile file,ModelAndView modelAndView,HttpServletRequest request) throws Exception{
 		String path=request.getServletContext().getRealPath("/files/");
+		System.out.println(path);
 		String filename=file.getOriginalFilename();
 		File filepath=new File(path, filename);
 		if (!filepath.getParentFile().exists()) {
