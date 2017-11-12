@@ -42,13 +42,13 @@ public class AuthorityInterceptor implements HandlerInterceptor {
           System.out.println(m.group(5));
 
       }
-		if(request.getSession().getAttribute("user")==null){
-			response.sendRedirect("/SSM/");
-			return false;
-		}
-		else {
+//		if(request.getSession().getAttribute("user")==null){
+//			response.sendRedirect("/SSM/");
+//			return false;
+//		}
+//		else {
 			return true;
-		}
+//		}
 		
 	}
 

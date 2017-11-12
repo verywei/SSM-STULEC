@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>index</title>
+<title>学生登录</title>
 <script src="http://lib.sinaapp.com/js/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -28,29 +28,6 @@ $(document).ready(function(){
 });
 </script>
 <style type="text/css">
-.header{
-height:30px;
-background:#FFF0F5;
-
-}
-.body{
-width:1200px;
-height:650px;
-margin:0 auto;
-background:#ff9999;
-}
-.login{
-border-style: outset;
-text-align:center;
-padding:10px;
-background:#FF8247;
-width:240px;
-height:100px;
-position:relative;
-top:40%;
-left:40%;
-
-}
 
 </style>
 </head>
