@@ -36,8 +36,6 @@ public class ManageController {
 	
 	public ModelAndView getAllLecture(ModelAndView modelAndView){
 		
-		
-		
 		return modelAndView;
 	}
 	
