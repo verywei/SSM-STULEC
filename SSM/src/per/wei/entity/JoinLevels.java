@@ -1,7 +1,12 @@
-package per.wei.entity;/** 
+package per.wei.entity;
+
+import org.springframework.stereotype.Component;
+
+/** 
 * @author  作者 : wangwev
 * @date 创建时间：2017年10月30日 下午10:25:36   
 */
+@Component
 public class JoinLevels {
 	String stu;
 	String level;

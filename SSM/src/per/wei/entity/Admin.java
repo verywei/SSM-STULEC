@@ -1,7 +1,12 @@
-package per.wei.entity;/** 
+package per.wei.entity;
+
+import org.springframework.stereotype.Component;
+
+/** 
 * @author  作者 : wangwev
 * @date 创建时间：2017年11月6日 下午11:07:26   
 */
+@Component
 public class Admin {
 	int id;
 	String name;

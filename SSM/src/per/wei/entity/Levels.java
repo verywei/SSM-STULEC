@@ -2,10 +2,13 @@ package per.wei.entity;
 
 import java.sql.Timestamp;
 
+import org.springframework.stereotype.Component;
+
 /** 
 * @author  作者 : wangwev
 * @date 创建时间：2017年10月30日 下午10:25:15   
 */
+@Component
 public class Levels {
 	String id;
 	String name;

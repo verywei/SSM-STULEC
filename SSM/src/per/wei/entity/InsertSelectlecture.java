@@ -1,10 +1,15 @@
-package per.wei.entity;/** 
+package per.wei.entity;
+
+import org.springframework.stereotype.Component;
+
+/** 
 * @author  作者 : wangwev
 * @date 创建时间：2017年10月29日 下午5:15:19   
 */
 /*
  * 添加选课实体
  */
+@Component
 public class InsertSelectlecture {
 	String lecture;
 	String student;

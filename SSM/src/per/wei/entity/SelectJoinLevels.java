@@ -5,6 +5,8 @@ package per.wei.entity;/**
 
 import java.sql.Timestamp;
 
+import org.springframework.stereotype.Component;
+@Component
 public class SelectJoinLevels {
 	String id;
 	String stu;

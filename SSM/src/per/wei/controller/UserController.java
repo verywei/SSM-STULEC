@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.sun.org.apache.regexp.internal.recompile;
 
+import per.wei.entity.Admin;
 import per.wei.entity.Student;
 import per.wei.service.LectureService;
 import per.wei.service.SelectlectureService;
@@ -30,6 +31,9 @@ public class UserController {
 	
 	@Autowired
 	private LectureService lectureService;
+	
+	@Autowired
+	private Admin admin;
 	
 	@Autowired
 	private SelectlectureService selectlectureService;

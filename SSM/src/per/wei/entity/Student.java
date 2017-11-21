@@ -2,6 +2,8 @@ package per.wei.entity;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 /** 
 * @author  作者 : wangwev
 * @date 创建时间：2017年10月23日 下午10:33:51   
@@ -9,6 +11,7 @@ import java.util.List;
 /*
  * 学生实体
  */
+@Component
 public class Student {
 	String stucard;
 	String name;
