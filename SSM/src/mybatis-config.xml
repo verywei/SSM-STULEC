@@ -6,6 +6,10 @@
     <!-- 别名 -->
     <settings>
         <setting name="logImpl" value="LOG4J"/>
+        <setting name="lazyLoadingEnabled" value="false" />
+		<setting name="aggressiveLazyLoading" value="true" />
+		<setting name="cacheEnabled" value="true" />  
+		<setting name="defaultStatementTimeout" value="25000" />  
     </settings>
     <typeAliases>
         <package name="per.wei.entity"/>

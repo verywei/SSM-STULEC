@@ -1,16 +1,18 @@
 package per.wei.entity;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 /** 
-* @author  作者 : wangwev
-* @date 创建时间：2017年10月26日 下午9:40:42   
+* @author  锟斤拷锟斤拷 : wangwev
+* @date 锟斤拷锟斤拷时锟戒：2017锟斤拷10锟斤拷26锟斤拷 锟斤拷锟斤拷9:40:42   
 */
 /*
- * 获取选课实体
+ * 锟斤拷取选锟斤拷实锟斤拷
  */
 @Component
-public class Selectlecture {
+public class Selectlecture implements Serializable{
 	Lecture lecture;
 	Student student;
 	String score;

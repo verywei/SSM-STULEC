@@ -1,13 +1,15 @@
 package per.wei.entity;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 /** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê11ÔÂ6ÈÕ ÏÂÎç11:07:26   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½11ï¿½ï¿½6ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½11:07:26   
 */
 @Component
-public class Admin {
+public class Admin implements Serializable{
 	int id;
 	String name;
 	String password;

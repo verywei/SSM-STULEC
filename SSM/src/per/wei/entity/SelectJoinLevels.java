@@ -1,13 +1,14 @@
 package per.wei.entity;/** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê10ÔÂ31ÈÕ ÏÂÎç8:23:50   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½10ï¿½ï¿½31ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½8:23:50   
 */
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import org.springframework.stereotype.Component;
 @Component
-public class SelectJoinLevels {
+public class SelectJoinLevels implements Serializable{
 	String id;
 	String stu;
 	String name;

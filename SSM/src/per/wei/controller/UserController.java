@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sun.org.apache.regexp.internal.recompile;
 
 import per.wei.entity.Admin;
 import per.wei.entity.Student;
@@ -21,8 +20,8 @@ import per.wei.service.SelectlectureService;
 import per.wei.service.UserService;
 
 /** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê10ÔÂ23ÈÕ ÏÂÎç10:44:51   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½10ï¿½ï¿½23ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:44:51   
 */
 @Controller
 public class UserController {
@@ -45,14 +44,14 @@ public class UserController {
 		String path=request.getServletContext().getRealPath("/files/");
 		System.out.println(path);
 		if (user==null) {
-			request.setAttribute("error", "ÔÝÎ´×¢²á");
+			request.setAttribute("error", "ï¿½ï¿½Î´×¢ï¿½ï¿½");
 		}else {
 			if (password.equals(user.getPassword())) {
 				request.getSession().setAttribute("user", user.getStucard());
 				mView.setViewName("redirect:/lecture/home");
 				return mView;
 			}else {
-				request.setAttribute("error","ÃÜÂë´íÎó");
+				request.setAttribute("error","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
 		}
 		mView.setViewName("/WEB-INF/content/index.jsp");

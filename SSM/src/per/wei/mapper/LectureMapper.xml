@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="per.wei.dao.LectureDao">
+<cache type="per.wei.util.RedisCache"/>
 	<select id="getAllLecture" parameterType="String" resultType="lecture">
 			select * from lecture where id not in (select lec from selectlecture where stu=#{id});
 	</select>

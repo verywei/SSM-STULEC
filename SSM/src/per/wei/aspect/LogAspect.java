@@ -10,8 +10,8 @@ import org.aspectj.lang.annotation.Before;
 
 
 /** 
-* @author  作者 : wangwev
-* @date 创建时间：2017年10月26日 下午6:13:35   
+* @author  锟斤拷锟斤拷 : wangwev
+* @date 锟斤拷锟斤拷时锟戒：2017锟斤拷10锟斤拷26锟斤拷 锟斤拷锟斤拷6:13:35   
 */
 @Aspect
 public class LogAspect {
@@ -19,7 +19,7 @@ public class LogAspect {
 	public void log(Object rxt){
 		if (rxt!=null) {
 			Logger logger=Logger.getLogger(rxt.getClass());
-			logger.error("LogAspect打印日志");
+			logger.error("LogAspect ******");
 		}
 		
 	}

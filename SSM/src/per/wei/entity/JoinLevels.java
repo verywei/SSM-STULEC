@@ -1,13 +1,15 @@
 package per.wei.entity;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 /** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê10ÔÂ30ÈÕ ÏÂÎç10:25:36   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½10ï¿½ï¿½30ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:25:36   
 */
 @Component
-public class JoinLevels {
+public class JoinLevels implements Serializable{
 	String stu;
 	String level;
 	String payment;

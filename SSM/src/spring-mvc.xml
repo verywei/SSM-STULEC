@@ -28,7 +28,7 @@
   		</property>
   </bean>
     <!-- 视图解析器 -->
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+    <!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"/> -->
     <!-- 访问静态资源 -->
     <mvc:interceptors>
     	<mvc:interceptor>

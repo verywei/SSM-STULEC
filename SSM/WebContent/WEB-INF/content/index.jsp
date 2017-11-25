@@ -9,24 +9,6 @@
 <title>学生登录</title>
 <script src="http://lib.sinaapp.com/js/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-    jQuery.navlevel2 = function(level1,dytime) {
-        
-      $(level1).mouseenter(function(){
-          varthis = $(this);
-          delytime=setTimeout(function(){
-            varthis.find('ul').slideDown();
-        },dytime);
-        
-      });
-      $(level1).mouseleave(function(){
-         clearTimeout(delytime);
-         $(this).find('ul').slideUp();
-      });
-      
-    };
-  $.navlevel2("li.mainlevel",300);
-});
 </script>
 <style type="text/css">
 

@@ -1,16 +1,18 @@
 package per.wei.entity;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 /** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê10ÔÂ26ÈÕ ÏÂÎç8:51:09   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½10ï¿½ï¿½26ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½8:51:09   
 */
 /*
- * ¿Î³ÌÊµÌå
+ * ï¿½Î³ï¿½Êµï¿½ï¿½
  */
 @Component
-public class Lecture {
+public class Lecture implements Serializable{
 	private String id;
 	private String name;
 	private String credit;

@@ -1,16 +1,18 @@
 package per.wei.entity;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
 /** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê10ÔÂ29ÈÕ ÏÂÎç5:15:19   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½10ï¿½ï¿½29ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½5:15:19   
 */
 /*
- * Ìí¼ÓÑ¡¿ÎÊµÌå
+ * ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Êµï¿½ï¿½
  */
 @Component
-public class InsertSelectlecture {
+public class InsertSelectlecture implements Serializable{
 	String lecture;
 	String student;
 	String score;

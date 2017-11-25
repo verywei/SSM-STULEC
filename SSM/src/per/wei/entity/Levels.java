@@ -1,15 +1,16 @@
 package per.wei.entity;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import org.springframework.stereotype.Component;
 
 /** 
-* @author  ×÷Õß : wangwev
-* @date ´´½¨Ê±¼ä£º2017Äê10ÔÂ30ÈÕ ÏÂÎç10:25:15   
+* @author  ï¿½ï¿½ï¿½ï¿½ : wangwev
+* @date ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º2017ï¿½ï¿½10ï¿½ï¿½30ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:25:15   
 */
 @Component
-public class Levels {
+public class Levels implements Serializable{
 	String id;
 	String name;
 	double money;
